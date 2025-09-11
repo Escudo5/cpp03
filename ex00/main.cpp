@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 17:59:29 by smarquez          #+#    #+#             */
-/*   Updated: 2025/09/11 13:34:16 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/09/11 13:41:03 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ int main()
     Test.takeDamage(2);
     Test.beRepaired(1);
     Test.attack("Joe");
-    Test.takeDamage(10);
+    Test.takeDamage(5);
     return(0);
 }

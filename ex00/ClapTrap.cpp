@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Claptrap.cpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 17:03:57 by smarquez          #+#    #+#             */
-/*   Updated: 2025/09/11 13:30:31 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/09/11 13:41:44 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 
-ClapTrap::ClapTrap() : name("ClapTrap"), hitPoints(10), energyPoints(10), attackDamage(10)
+ClapTrap::ClapTrap() : name("ClapTrap"), hitPoints(10), energyPoints(10), attackDamage(0)
 {
     std::cout << "Default constructor" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(10), energyPoints(10), attackDamage(10)
 {
-    std::cout << "ClapTrap" << name << "has spawned" << std::endl;
+    std::cout << "ClapTrap " << name << " has spawned " << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy)
@@ -95,7 +95,7 @@ void ClapTrap::takeDamage(unsigned int amount)
         hitPoints = hitPoints + amount;
     }
     
-    std::cout << "ClapTrap" << name << "repairs itself" << amount << "hit points" << std::endl;
+    std::cout << "ClapTrap" << name << " repairs itself " << amount << " hit points " << std::endl;
     energyPoints--;
         
 }
