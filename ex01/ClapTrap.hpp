@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 16:57:29 by smarquez          #+#    #+#             */
-/*   Updated: 2025/09/11 16:49:11 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/09/12 12:13:40 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class ClapTrap
         int getHp();
         int getEnergy();
         std::string getName();
-        
+        int getAttackDamage();
         
         protected:
             std::string name;
