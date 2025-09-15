@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 11:26:52 by smarquez          #+#    #+#             */
-/*   Updated: 2025/09/15 11:55:26 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/09/15 12:12:44 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 // {
     
 // }
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), ScavTrap(), FragTrap(), name(name)
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), FragTrap(), ScavTrap(), name(name)
 {
     this->hitPoints = FragTrap::hitPoints;
     this->energyPoints = ScavTrap::energyPoints;
     this->attackDamage = FragTrap::attackDamage;
-    std::cout << "Diamond" << name  << "has  been constructed" << std::endl;
+    std::cout << "Diamond" << name  << " has  been constructed" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap &copy) : ClapTrap(copy), FragTrap(copy), ScavTrap(copy), name(copy.name)
@@ -30,7 +30,7 @@ DiamondTrap::DiamondTrap(const DiamondTrap &copy) : ClapTrap(copy), FragTrap(cop
     std::cout << "DiamondTrap" << name << "arrives" << std::endl;
 }
 
-DiamondTrap &DiamondTrap::operator=(const DiamondTrap &copy) : ClapTrap::operator=(), 
+DiamondTrap &DiamondTrap::operator=(const DiamondTrap &copy)
 {
     this->attackDamage = copy.attackDamage;
     this->energyPoints = copy.energyPoints;
@@ -41,7 +41,7 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &copy) : ClapTrap::operato
 
 DiamondTrap::~DiamondTrap()
 {
-    std::cout << "DiamondTrap" << name << "left the server" << std::endl;
+    std::cout << "DiamondTrap" << name << " has been destroyed" << std::endl;
 }
 
 void DiamondTrap::attack(const std::string &target)
@@ -51,6 +51,6 @@ void DiamondTrap::attack(const std::string &target)
 
 void DiamondTrap::whoAmI()
 {
-    std::cout  << "I am " << name << " the y call me" << ClapTrap::name << std::endl;
+    std::cout  << "I am " << name << " the y call me " << ClapTrap::name << std::endl;
 }
 
