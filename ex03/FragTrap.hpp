@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 13:30:17 by smarquez          #+#    #+#             */
-/*   Updated: 2025/09/15 10:53:45 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/09/16 15:33:37 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class FragTrap : virtual public ClapTrap
         FragTrap &operator=(const FragTrap &copy);
         ~FragTrap();
 
-        void attack(const std::string &target);
+        //void attack(const std::string &target);
 
 
 
